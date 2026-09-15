@@ -1,5 +1,10 @@
 # Repertory
 
+[![Live app](https://img.shields.io/badge/live-repertory-0ea5e9?style=flat-square)](https://www.repertory.iamahmadmhd.com)
+[![React 19](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![AWS Amplify](https://img.shields.io/badge/AWS-Amplify_Gen_2-ff9900?style=flat-square&logo=awsamplify&logoColor=white)](https://docs.amplify.aws)
+
 A collaborative movie discovery and watchlist app. Authenticated members browse and search films (sourced
 from [TMDB](https://www.themoviedb.org/)), save titles privately, and build watchlists that
 other members can collaborate on in real time - with per-list Owner / Editor / Viewer roles
@@ -61,6 +66,10 @@ built against, and the rest of this README just summarizes them for a quick star
 
 ## Getting started
 
+**Try it: [https://www.repertory.iamahmadmhd.com](https://www.repertory.iamahmadmhd.com/)** — sign in with any email address; a one-time
+code arrives in a few seconds. There is no password.
+
+To run it locally against your own backend:
 Requires [pnpm](https://pnpm.io/) and AWS credentials for the sandbox backend.
 
 ```bash

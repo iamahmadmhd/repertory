@@ -55,6 +55,13 @@ Built for both, not reflowed into one. Desktop and mobile are separate trees beh
 One token system, two themes. Colour is defined once as custom properties and resolved per scheme with CSS light-dark() - including the generated member colours, which are OKLCH pairs rather than two hand-maintained palettes. No component knows which theme is active.
 ![The watchlist detail screen from image 2, rendered in light mode with the same content and layout.](https://github.com/user-attachments/assets/7024db52-0309-401a-b2d3-e9b1f3d346f7)
 
+## How this was built
+
+Specified first: `docs/SRS.md` and `docs/SYSTEM-DESIGN.md` were written before the code,
+and the architecture, authorization model, and ADRs are mine. Implementation was
+AI-assisted (Claude Code), working against `CLAUDE.md` — the constraint set distilled
+from those documents. Every authorization rule is verified against the API, not the UI.
+
 ## Documents (source of truth)
 
 - [`docs/SRS.md`](docs/SRS.md) - what the system must do (requirement IDs: `FR-*`, `NFR-*`, `V-*`)

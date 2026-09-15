@@ -8,6 +8,18 @@ and changes syncing live across everyone viewing the same list.
 Built serverless on React 19 + TypeScript and AWS Amplify Gen 2. See [Tech stack](#tech-stack)
 below for the full list.
 
+## Screens
+
+### Real-time collaboration
+
+A film added by one member appears for everyone with the list open — an AppSync subscription scoped to that single watchlist, not a global firehose. Writes reconcile by server id, so your own optimistic insert is replaced rather than duplicated when its event echoes back. (FR-SYNC-1, FR-SYNC-2)
+![Two browser windows side by side, signed in as different members. A film added to a watchlist in the left window appears in the right window's list without a page reload.](https://github.com/user-attachments/assets/99897d78-cd89-4917-a277-245520aa3e36)
+
+### Watchlists with per-list roles
+
+Owner, Editor and Viewer are enforced server-side — the badges here are presentation only; AppSync rejects the operations regardless of what the client renders. Member colours are derived from a hash of the user id, so nobody has to assign them. (FR-LIST-5, FR-MEM-3, NFR-SEC-1)
+![A watchlist detail screen. Three members are listed with coloured avatar initials and role badges reading OWNER, EDITOR and VIEWER.](https://github.com/user-attachments/assets/d2866446-2bee-4816-a8e9-5715fd3c29c5)
+
 ## Documents (source of truth)
 
 - [`docs/SRS.md`](docs/SRS.md) — what the system must do (requirement IDs: `FR-*`, `NFR-*`, `V-*`)
